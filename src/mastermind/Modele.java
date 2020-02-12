@@ -1,28 +1,24 @@
 package mastermind;
 
 import java.awt.Color;
-import java.util.Enumeration;
 
 public class Modele {
 	public Color [] couleur = {Color.YELLOW, Color.GREEN,Color.BLUE,Color.MAGENTA, Color.RED, Color.ORANGE,Color.WHITE, Color.BLACK};
 	public int N_TENTATIVES = 10;
 	public int difficulte = 4;
 	
-	static public enum Etat {EN_COURS, GAGNE, PERDU};
+	static public enum Etat {EN_COURS, GAGNE, PERDU} ;
+	
+	Etat etat;
+	Rangee combinaison;
+	Rangee[] proposition;
+	int tentative;
 	
 	
-	/*public Modele (Color[] coul, int tentatives, int diffi, enum etat) {
-		this.couleur = coul;
-		this.N_TENTATIVES= tentatives;
-		this.difficulte= diffi;
-		this.Etat=etat;
+	public Modele (Color[] coul, int tentatives, int diffi, Etat etat) {
 		
-		
-	}*/
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
 	}
+
+	
 
 }
