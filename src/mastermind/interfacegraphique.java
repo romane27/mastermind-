@@ -3,20 +3,25 @@ package mastermind;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Frame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
-public class interfacegraphique extends Frame implements WindowListener {
+public class interfacegraphique extends Frame implements WindowListener, ActionListener {
 	public interfacegraphique() {
 		super();
-		this.setSize(640,360);
-		this.setBackground(Color.blue);
-		//this.setLayout(new BorderLayout());
-		vueClavier vuecla = new vueClavier();
-		this.add(vuecla);
+		Modele m = new Modele();
+		this.setSize(300,600);
+		
+		this.setLayout(new BorderLayout());
+		vueClavier vuecla = new vueClavier(m,this);
+		this.add(vuecla,BorderLayout.EAST);
 		vuePropositions vuepropo = new vuePropositions();
 		this.add(vuepropo);		
 		this.addWindowListener(this);
+		
 		this.pack();
 		this.setVisible(true);
 	}
@@ -72,6 +77,13 @@ public class interfacegraphique extends Frame implements WindowListener {
 
 	@Override
 	public void windowDeactivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		
 	}}

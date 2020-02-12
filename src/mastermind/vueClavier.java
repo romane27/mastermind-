@@ -1,24 +1,35 @@
 package mastermind;
 
-import java.awt.Checkbox;
-import java.awt.CheckboxGroup;
+
+import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.Panel;
+import java.awt.event.ActionListener;
 import java.awt.event.ItemListener;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
 
 public class vueClavier extends Panel {
 	Modele m;
-	Checkbox[] boutons = new Checkbox[m.couleur.length];
+	private JButton bout1,but2; 
 
-	public vueClavier() {
-		this.setLayout(new FlowLayout());
-		CheckboxGroup cg=new CheckboxGroup();
+	public vueClavier(Modele m, ActionListener l ) {
+		super();
+		
+		
+		JButton bouton=new JButton();
 		for(int i = 0; i < m.couleur.length; i++)
 		{
-			this.boutons[i] = new Checkbox();
+			
+			bout1 = new JButton();
+			bout1.setBackground(m.couleur[i]);
+			this.add(bout1);
+			bout1.setVisible(true);
 			// pour avoir un controle sur le clic 
-			this.boutons[i].addItemListener(l);
-			this.add(this.boutons[i]);
+			
+			
 		}
+		
 	
 }}
