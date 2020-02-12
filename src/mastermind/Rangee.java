@@ -5,11 +5,13 @@ import java.awt.Color;
 public class Rangee  {
 	
 	int indiceJeton;
-	int [] resultat = new int[2];
+	int [] resultat;
 	Color [] jetons;
 	
-	public Rangee (Modele m) {
-		jetons = new Color [m.difficulte];
+	public Rangee () {
+		this.jetons = new Color [Modele.difficulte];
+		this.resultat  = new int[2];
+		this.indiceJeton = 0;
 		
 		
 		

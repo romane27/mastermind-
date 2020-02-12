@@ -1,11 +1,12 @@
 package mastermind;
 
 import java.awt.Color;
+import java.util.Random;
 
 public class Modele {
 	public Color [] couleur = {Color.YELLOW, Color.GREEN,Color.BLUE,Color.MAGENTA, Color.RED, Color.ORANGE,Color.WHITE, Color.BLACK};
 	public int N_TENTATIVES = 10;
-	public int difficulte = 4;
+	public static int difficulte = 4;
 	
 	static public enum Etat {EN_COURS, GAGNE, PERDU} ;
 	
@@ -14,9 +15,14 @@ public class Modele {
 	Rangee[] proposition;
 	int tentative;
 	
+	Random r = new Random();
 	
-	public Modele (Color[] coul, int tentatives, int diffi, Etat etat) {
-		
+	
+	
+	public Modele () {
+	this.etat = Etat.EN_COURS;
+	this.combinaison = new Rangee();
+	
 	}
 
 	
