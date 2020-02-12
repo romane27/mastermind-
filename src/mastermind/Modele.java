@@ -22,6 +22,14 @@ public class Modele {
 	public Modele () {
 	this.etat = Etat.EN_COURS;
 	this.combinaison = new Rangee();
+	for (int i = 0; i<this.difficulte;i++) {
+		combinaison.jetons[i-1] = couleur[r.nextInt(couleur.length)];
+		
+	}
+	this.proposition = new Rangee[N_TENTATIVES];
+	this.tentative = -1;
+	
+	
 	
 	}
 
