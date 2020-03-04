@@ -18,7 +18,7 @@ public class vueClavier extends Panel implements Observer{
 	//Modele m;
 	public JButton bout1,but2; 
 
-	public vueClavier(Modele m, ActionListener l ) {
+	public vueClavier(Modele m, ActionListener l, interfacegraphique inter) {
 		super();
 		
 		
