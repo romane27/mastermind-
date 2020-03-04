@@ -6,13 +6,17 @@ import java.awt.FlowLayout;
 import java.awt.Panel;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemListener;
+import java.util.Observable;
+import java.util.Observer;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-public class vueClavier extends Panel {
-	Modele m;
-	private JButton bout1,but2; 
+import tp.ImageModèle;
+
+public class vueClavier extends Panel implements Observer{
+	//Modele m;
+	public JButton bout1,but2; 
 
 	public vueClavier(Modele m, ActionListener l ) {
 		super();
@@ -32,4 +36,12 @@ public class vueClavier extends Panel {
 		}
 		
 	
-}}
+}
+
+	@Override
+	public void update(Observable o, Object arg) {
+		// TODO Auto-generated method stub
+		
+		Integer etat = (Integer)arg;
+	}
+	}

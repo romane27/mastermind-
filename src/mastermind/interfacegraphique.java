@@ -18,8 +18,8 @@ public class interfacegraphique extends Frame implements WindowListener, ActionL
 		this.setLayout(new BorderLayout());
 		vueClavier vuecla = new vueClavier(m,this);
 		this.add(vuecla,BorderLayout.SOUTH);
-		vuePropositions vuepropo = new vuePropositions();
-		this.add(vuepropo);		
+		vuePropositions vuepropo = new vuePropositions(m,this);
+		this.add(vuepropo,BorderLayout.NORTH);		
 		this.addWindowListener(this);
 		
 		
