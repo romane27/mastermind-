@@ -62,6 +62,10 @@ public class vuePropositions extends Canvas   {
 					g.fillOval(20+(j*40), 10+(i*35 - 20), 2, 2);
 				
 				}
+				if(this.propositions[i].indiceJeton == Modele.difficulte && this.propositions[i].resultat[j] != null ) {
+					g.setColor(this.propositions[i].resultat[j]);
+					g.fillOval(50*Modele.difficulte-27+j*10, i*35-13, 5, 5);
+				}
 					
 				}
 			}

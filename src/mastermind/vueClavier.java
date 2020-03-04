@@ -12,7 +12,7 @@ import java.util.Observer;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-import tp.ImageModèle;
+//import tp.ImageModèle;
 
 public class vueClavier extends Panel implements Observer{
 	//Modele m;
@@ -28,6 +28,8 @@ public class vueClavier extends Panel implements Observer{
 			
 			bout1 = new JButton();
 			bout1.setBackground(m.couleur[i]);
+			bout1.addActionListener(l);
+			bout1.setName(Integer.toString(i));
 			this.add(bout1);
 			bout1.setVisible(true);
 			// pour avoir un controle sur le clic 
