@@ -6,10 +6,10 @@ public class Rangee  {
 	
 	int indiceJeton;
 	int [] resultat;
-	Color [] jetons;
+	Color [] rangee;
 	
 	public Rangee () {
-		this.jetons = new Color [Modele.difficulte];
+		this.rangee = new Color [Modele.difficulte];
 		this.resultat  = new int[2];
 		this.indiceJeton = 0;
 		

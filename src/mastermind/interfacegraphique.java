@@ -13,7 +13,7 @@ public class interfacegraphique extends Frame implements WindowListener, ActionL
 	public interfacegraphique() {
 		super();
 		Modele m = new Modele();
-		this.setSize(400,600);
+		
 		
 		this.setLayout(new BorderLayout());
 		vueClavier vuecla = new vueClavier(m,this);
@@ -21,7 +21,8 @@ public class interfacegraphique extends Frame implements WindowListener, ActionL
 		vuePropositions vuepropo = new vuePropositions(m.proposition);
 		this.add(vuepropo,BorderLayout.NORTH);		
 		this.addWindowListener(this);
-		
+		this.setTitle("Mastermind");
+		this.pack();
 		
 		this.setVisible(true);
 	}

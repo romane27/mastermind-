@@ -12,7 +12,7 @@ public class Modele {
 	
 	Etat etat;
 	Rangee combinaison;
-	Rangee[] proposition;
+	Rangee proposition [];
 	int tentative;
 	
 	Random r = new Random();
